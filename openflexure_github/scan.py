@@ -31,7 +31,7 @@ XyzCoordinate = Tuple[int, int, int]
 ### Function responsible for detection on a single image
 ### depending on save parameter it saves image with cracks in bounded box
 def tflite_detect_images(image_path, save=True):
-    modelpath = '/var/openflexure/application/openflexure-microscope-server/openflexure_microscope/api/default_extensions/hopethisworks.tflite'
+    modelpath = '/var/openflexure/application/openflexure-microscope-server/openflexure_microscope/api/default_extensions/detect.tflite'
     # Load the Tensorflow Lite model into memory
     interpreter = tflite.Interpreter(model_path=modelpath)
     interpreter.allocate_tensors()
